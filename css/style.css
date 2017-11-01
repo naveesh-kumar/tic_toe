@@ -1,0 +1,53 @@
+body {
+    background-image: url('../images/wood.jpg');
+}
+
+#container{
+    margin: 5% 28% 0 28%;    
+}
+
+#container table{
+    height: 30em;
+}
+
+#container .tictoeborder-right{
+    border-right:5px solid black;    
+}
+
+#container .tictoeborder-bottom{
+    border-bottom:5px solid black;
+}
+
+#container table input{
+    width: 25%;
+    height: 25%;
+    font-size: 20px;
+    text-align: center;
+}
+
+#container #resetBtn{
+    float: right;
+}
+
+#container .row .col-md-4{
+    height: 5em;
+    line-height: 5em;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#container .player1-color{
+    color: red;
+}
+
+#container .player2-color{
+    color: blue;
+}
+
+#container #playerTurn{
+    color: white;
+}
+
+/*#container .row .col:nth-child(2), #container .row .col:nth-child(3){
+    margin-left: -4px;
+}*/

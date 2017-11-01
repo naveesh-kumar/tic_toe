@@ -1,0 +1,107 @@
+<html>
+
+    <head>
+        <title>Tic-Toe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    </head>
+
+    <body>
+
+        <h1 class="text-center">Tic-Tac-Toe</h1>
+
+        <div id="container">            
+
+            <div id="startup">
+                <form  onsubmit="tictactoe.startGame(event)" autocomplete="off">
+                    <div class="form-group">
+                        <label>Player 1</label>
+                        <input class="form-control" type="text" name="player1" placeholder="Enter name" autofocus/>
+                    </div>
+                    <div class="form-group">
+                        <label>Player 2</label>
+                        <input class="form-control" type="text" name="player2" placeholder="Enter name"/>
+                    </div>
+                    <button class="btn btn-success pull-right">Start Game</button>
+                </form>
+            </div>
+
+            <div id="gameboard" class="hide">
+
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <h3 class="player1-color">Player 1: <span id="player1Name"></span> (X)</h3>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <h3 class="player2-color">Player 2: <span id="player2Name"></span> (O)</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3><span id="playerTurn"></span></h3>
+                    </div>
+                </div>
+                
+
+                <button class="btn btn-success pull-right" onclick="tictactoe.restartGame();">Re-start game</button>
+                <button class="btn btn-primary" onclick="tictactoe.resetGame();">Reset</button>
+                <div class="clearfix"></div>
+
+                <br/>
+
+                <div id="gameboard-content"></div>
+
+                <!--<div class="row">
+                    <div class="col-md-4 tictoeborder-right tictoeborder-bottom text-center" onclick="tictactoe.onCellClick(this, 1, 1)">
+                        &nbsp;
+                    </div>
+                    <div class="col-md-4 tictoeborder-right tictoeborder-bottom text-center" onclick="tictactoe.onCellClick(this, 1, 2)">
+                        &nbsp;
+                    </div>
+                    <div class="col-md-4 tictoeborder-bottom text-center" onclick="tictactoe.onCellClick(this, 1, 3)">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 tictoeborder-right tictoeborder-bottom text-center" onclick="tictactoe.onCellClick(this, 2, 1)">
+                        &nbsp;
+                    </div>
+                    <div class="col-md-4 tictoeborder-right tictoeborder-bottom text-center" onclick="tictactoe.onCellClick(this, 2, 2)">
+                        &nbsp;
+                    </div>
+                    <div class="col-md-4 tictoeborder-bottom text-center" onclick="tictactoe.onCellClick(this, 2, 3)">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 tictoeborder-right text-center" onclick="tictactoe.onCellClick(this, 3, 1)">
+                        &nbsp;
+                    </div>
+                    <div class="col-md-4 tictoeborder-right text-center" onclick="tictactoe.onCellClick(this, 3, 2)">
+                        &nbsp;
+                    </div>
+                    <div class="col-md-4 text-center" onclick="tictactoe.onCellClick(this, 3, 3)">
+                        &nbsp;
+                    </div>
+                </div>-->
+            </div>
+            
+        </div>
+
+        <script src="js/tictactoe.js"></script>
+        <script>
+            
+            // document.addEventListener("submit", function(event){
+            //     event.preventDefault();    
+            // }, false);
+
+            var tictactoe = new Tictactoe();
+        </script>
+
+    </body>
+
+</html>
